@@ -1,0 +1,242 @@
+@import fonts
+@import reset
+@import vars
+
+body
+    @extend  %dinPro
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 15px
+
+.btn
+    display: flex
+    border: 3px solid
+    text-transform: uppercase
+    padding: 18px 121px 18px
+    font-size: 18px
+    line-height: 18px
+    @extend %dinPro-700
+    cursor: pointer
+    transition: all .3s
+
+.link
+    color: #3d95e3
+    transition: all .3s
+    &:hover
+        color: #fff
+//main
+.main
+    &__inner
+        padding-top: 65px
+        margin-bottom: 134px
+    &__heading
+        margin-bottom: 65px
+        text-align: center
+        font-size: 45px
+        line-height: 50px
+        color: $primary
+    &__text
+        max-width: 1188px
+        width: 100%
+        margin: 0 auto
+        text-align: center
+        color: #08172d
+        font-size: 18px
+        line-height: 21px
+        @extend %myriadPro-400
+        p:not(:last-child)
+            margin-bottom: 20px
+
+//projects-gallery
+.projects-gallery
+    &__inner
+        margin-bottom: 106px
+        padding: 0 20px
+    &__items
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 83px
+    &__btn
+        margin: 0 auto
+        border-color: rgb(0, 38, 76)
+        color: $primary
+        &:hover
+            background-color: rgb(0, 38, 76)
+            color: #fff
+
+.projects-gallery-item
+    max-width: 597px
+    width: 100%
+    height: 602px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    position: relative
+    cursor: pointer
+    &::before
+        content: ""
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 100%
+        background-image: url(../images/projects-gallery-bg.png)
+        background-repeat: no-repeat
+        background-size: cover
+
+    &__heading
+        bottom: 45px
+        left: 0
+        right: 0
+        text-align: center
+        text-transform: uppercase
+        color: #fff
+        font-size: 24px
+        line-height: 28px
+        position: absolute
+        @extend %dinPro-700
+
+//projects-gallery-popup
+.projects-gallery-popup
+    max-width: 900px
+    width: 100%
+    &__inner
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+
+    &__img
+        max-width: 450px
+        width: 100%
+        margin-right: 22px
+    &__heading
+        margin-bottom: 32px
+        font-size: 30px
+        line-height: 35px
+        text-transform: uppercase
+        @extend %dinPro-700
+    &__text
+        font-size: 20px
+        line-height: 22px
+        p:not(:last-child)
+            margin-bottom: 12px
+
+.footer
+    background-color: rgb(12, 28, 40)
+    color: #fff
+    padding: 32px 0 97px
+    &-container
+        max-width: 1250px
+        width: 100%
+        padding: 0 15px
+        margin: 0 auto
+    &__inner
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &__heading
+        margin-bottom: 73px
+        font-size: 45px
+        line-height: 49px
+        @extend %dinPro-700
+        text-transform: uppercase
+    &__text
+        font-size: 18px
+        line-height: 21px
+        max-width: 413px
+        width: 100%
+        @extend %myriadPro-400
+        &:not(:last-child)
+            margin-bottom: 25px
+        &:last-child
+            margin-bottom: 50px
+
+.footer-contacts
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    &__col:first-child
+        position: relative
+        padding-right: 70px
+        margin-right: 35px
+    &__col:first-child::before
+        content: ""
+        position: absolute
+        background-color: rgb(0, 88, 167)
+        width: 3px
+        height: 105px
+        right: 0
+        top: 0px
+
+    &__phone
+        @extend  %myriadPro-400
+        font-size: 30px
+        line-height: 40px
+        display: block
+        transition: all .3s
+        &:hover
+            color: #3d95e3
+    &__link
+        font-size: 18px
+        line-height: 20px
+        color: #3d95e3
+        span
+            display: block
+            pointer-events: none
+        &:not(:last-child)
+            margin-bottom: 26px
+//form footer
+.form
+    &-footer
+        max-width: 556px
+        width: 100%
+        border: 5px solid rgba(84, 102, 130, 0.329)
+        padding: 38px 38px 28px
+    &-row:not(:last-child)
+        margin-bottom: 2px
+    &-input
+        width: 100%
+        display: block
+        padding: 22px 35px 23px
+        background-color: rgba(84, 102, 130, 0.329)
+        color: #fff
+        @extend %myriadPro-400
+        font-size: 15px
+        line-height: 17px
+        transition: all .3s
+        &::placeholder
+            color: #fff
+            font-size: 15px
+            line-height: 17px
+        &:hover,
+        &:focus
+            box-shadow: 0 0 0 0.10rem rgba(225, 225, 225, 0.25)
+    &-input.invalid
+        background-color: rgba(#dc3545, 0.2)
+    &-textarea
+        resize: none
+        min-height: 112px
+        outline: none
+        border: none
+    &-link
+        display: block
+        text-align: center
+        margin: 18px auto 19px
+    &-btn
+        border-color: #fff
+        color: #fff
+        padding-left: 60px
+        padding-right: 60px
+        margin: 0 auto
+        &:hover
+            color: rgb(12, 28, 40)
+            background-color: #fff
+
+.error-msg
+    margin: 5px 0
+    color: #dc3545
+@import media
